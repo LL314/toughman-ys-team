@@ -1,4 +1,6 @@
-# ys-team
+# @toughman/ys-team
+
+本包由 npm 账号 `toughman` 维护，CLI 命令仍为 `ys-team`。内容基于原 `ys-team` 项目继续维护；MIT 许可证和原作者版权声明见 [LICENSE](LICENSE)。
 
 给 AI coding agent 装一层 verifier-first 的项目纪律。安装一次，正常开发。
 
@@ -46,7 +48,7 @@ v1 不再排他，也不靠强制尾标证明“进入流程”。真正的 gate
 ## 30 秒开始
 
 ```bash
-npx ys-team install-skills --force
+npx @toughman/ys-team install-skills --force
 ```
 
 然后在你的项目里对 agent 说：
@@ -108,9 +110,9 @@ output_mode: friendly
 ## CLI 参考
 
 ```bash
-npx ys-team install-skills [--dest <dir>] [--force] [--dry-run]
-npx ys-team init-project [--dir <project-dir>] [--force] [--dry-run]
-npx ys-team check-update
+npx @toughman/ys-team install-skills [--dest <dir>] [--force] [--dry-run]
+npx @toughman/ys-team init-project [--dir <project-dir>] [--force] [--dry-run]
+npx @toughman/ys-team check-update
 ```
 
 `install-skills --force` 会替换当前 ys-team 已安装的同名 skill，并清理当前 npm 包不再提供的旧 ys-team skill。

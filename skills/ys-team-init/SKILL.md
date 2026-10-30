@@ -127,7 +127,7 @@ rebuild 时：
 可建议用户运行：
 
 ```bash
-npx ys-team@latest init-project --dir <repo>
+npx @toughman/ys-team@latest init-project --dir <repo>
 ```
 
 该命令会安全刷新 repo-local skills 和 `AGENTS.md` / `CLAUDE.md` 托管块。

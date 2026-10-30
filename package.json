@@ -1,5 +1,6 @@
 {
-  "name": "ys-team",
+  "name": "@toughman/ys-team",
+  "author": "toughman",
   "version": "1.0.4",
   "description": "AI 团队治理方法论：以 verifier 卡和人等价验收为退出条件的轻量 loop-era 工作流",
   "keywords": [
@@ -12,13 +13,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dwp7399/ys-team"
+    "url": "git+https://github.com/LL314/toughman-ys-team.git"
   },
   "publishConfig": {
     "access": "public"
   },
   "bin": {
-    "ys-team": "./scripts/ys-team.mjs"
+    "ys-team": "scripts/ys-team.mjs"
   },
   "files": [
     "skills/",

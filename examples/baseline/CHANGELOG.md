@@ -67,7 +67,7 @@
 
 ### Migration Hint
 
-- 已有项目升级后运行 `npx ys-team@latest init-project --dir <repo>`，刷新 repo-local skills 和 `AGENTS.md` / `CLAUDE.md` 托管块
+- 已有项目升级后运行 `npx @toughman/ys-team@latest init-project --dir <repo>`，刷新 repo-local skills 和 `AGENTS.md` / `CLAUDE.md` 托管块
 - 将项目自己的运行、发布、性能、安全规则放在 `ys-team:managed` 托管块外
 - 若入口文件仍残留 L0/L1/L2、固定尾标或 role/slot 口径，按 v1 `direct / patch / spec` 托管块清理
 
