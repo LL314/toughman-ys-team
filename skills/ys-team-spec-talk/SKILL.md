@@ -9,13 +9,12 @@ description: "Create or review a ys-team verifier card for a non-trivial change.
 
 被调用时立即执行：
 
-1. 读取 `.ys_team/config.yaml`、`.ys_team/rules.md`、`.ys_team/reality.md`、`.ys_team/glossary.md` 和相关项目文档。
-2. 做意图三段判断：当前对象、当前目标、当前阻塞。
-3. 如果边界不清，先 grill；问题过多时生成 `questions.md`。
-4. 收敛后写 verifier 卡到 `docs/specs/queued/<initiative-id>/spec.md`。
-5. 运行结构 lint；不通过则继续澄清或标记 BLOCKED。
-6. 对关键、不可逆、多模块工作，可请求跨模型对抗审阅。
-7. 更新 `.ys_team/status.md`。
+1. 按下方 **Read Order** 读取项目规则、术语和相关资料。
+2. 按下方 **Intent First** 做意图三段判断。
+3. 边界不清时按下方 **Grill** 收敛；问题过多时生成 `questions.md`。
+4. 收敛后把 verifier 卡写到 `docs/specs/queued/<initiative-id>/spec.md`。
+5. 对关键、不可逆、多模块工作，可按下方 **Adversarial Review** 请求跨模型审阅。
+6. 更新 `.ys_team/status.md`。
 
 </what-to-do>
 
@@ -97,6 +96,8 @@ Ready For Spec：
 - Delete-Scope 覆盖删除行为。
 - 目的与验收证明存在，且目的不是实现动作。
 - 每个交付项能追溯到 Write-Scope。
+- 验收预期来自用户目标、规格或独立样例；没有用被测实现重算预期。
+- bug 修复有同一复现检查的前后证据，或有明确的不可复现说明。
 - 验收声明 L3/L2/L1/L0。
 - UI/交互类验收低于 L2 时 REJECT。
 - Feedback Loop 存在且可运行，或 N/A 理由成立。

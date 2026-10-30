@@ -10,12 +10,11 @@ description: "Execute an approved ys-team verifier card in a loop until its veri
 被调用时立即执行：
 
 1. 读取当前 active spec 的 `spec.md`、`work.md`、`qa-report.md`（如存在）、`.ys_team/rules.md`、`.ys_team/reality.md` 和相关错题本。
-2. 校验前置：spec-review PASS；当前位于 `release/<version>` 或 `work/<spec-id>` 分支；verifier 卡含 Write-Scope、目的与验收证明、保真度等级和 Feedback Loop。
-3. 建立原生 todo，小步执行：一个原则或机制一个闭环。
+2. 按下方 **Preflight** 校验进入条件。
+3. 按下方 **Execution Loop** 建立 todo 并执行可独立验收的完整行为；不能独立验收时记录依赖和统一验收点。
 4. 在 loop 内反复运行 Feedback Loop；失败则继续修。
 5. 最终运行 Verification；未全绿不得声明完成。
-6. 维护 `work.md` 并收集 evidence。
-7. 更新 `.ys_team/status.md`。
+6. 按下方 **Evidence / Work Log / Status** 记录证据和状态。
 
 scope 外修改需求出现时停止，回到 spec-talk 或请求用户确认。
 
@@ -50,7 +49,7 @@ scope 外修改需求出现时停止，回到 spec-talk 或请求用户确认。
 ## Execution Loop
 
 1. 从 verifier 卡提取交付项和验收项。
-2. **任务拆解**（复杂 spec 必做，简单 spec 可跳）：把交付项拆成 bite-sized 任务，每任务一个原则或机制，TDD 节奏（写失败测试 → 跑确认失败 → 最小实现 → 跑确认通过 → commit）。拆解写入 `work.md` 任务清单。
+2. **任务拆解**（复杂 spec 必做，简单 spec 可跳）：优先把每项拆成可独立验收的完整行为，写清行为结果、涉及文件、验收信号和必要依赖。不能独立验收时注明统一验收点。行为变更遵循 TDD 节奏（写失败测试 → 跑确认失败 → 最小实现 → 跑确认通过 → commit）；纯文档或模板改动使用对应的结构/同步检查。拆解写入 `work.md` 任务清单。
 3. 建立 todo。
 4. 执行一个小闭环。
 5. 运行 Feedback Loop。
