@@ -7,4 +7,4 @@
 - [x] 完成打包、解包和 CLI 验证；`git diff --check`、baseline 双副本 diff、`npm pack --dry-run`、临时解包和两个 CLI dry-run 均通过。
 - [ ] 认证可用后发布、切换 origin、合回 main、tag、push。
 
-当前阻断：终端 `npm whoami` 返回 `ENEEDAUTH`，浏览器 npm 页面也显示 Sign In；GitHub 新仓库已创建，但发布和 push 仍需对应账号凭据。
+验证记录：`npm whoami` 已确认账号为 `toughman`；`npm publish --access public` 被 npm 拒绝，原因是该账号启用了 2FA，但当前 token 没有 bypass 2FA 权限。新 GitHub 仓库已创建并已切换本地 `origin`，本机 Git 没有可用 HTTPS 凭据，push 返回 `could not read Username`。
