@@ -1,5 +1,5 @@
 {
-  "name": "@toughman/ys-team",
+  "name": "toughman-ys-team",
   "author": "toughman",
   "version": "1.0.4",
   "description": "AI 团队治理方法论：以 verifier 卡和人等价验收为退出条件的轻量 loop-era 工作流",

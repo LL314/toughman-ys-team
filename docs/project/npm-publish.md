@@ -37,7 +37,7 @@
 ### 全局模式
 
 ```bash
-npx @toughman/ys-team install-skills
+npx toughman-ys-team install-skills
 ```
 
 默认写入：
@@ -49,7 +49,7 @@ npx @toughman/ys-team install-skills
 ### 项目模式
 
 ```bash
-npx @toughman/ys-team init-project --dir /path/to/project
+npx toughman-ys-team init-project --dir /path/to/project
 ```
 
 默认写入：

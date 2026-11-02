@@ -8,21 +8,21 @@
 ## 安装
 
 ```bash
-npx @toughman/ys-team install-skills --force
+npx toughman-ys-team install-skills --force
 ```
 
 自定义安装路径：
 
 ```bash
-npx @toughman/ys-team install-skills --dest /your/path --force
+npx toughman-ys-team install-skills --dest /your/path --force
 ```
 
 更新：
 
 ```bash
-npx @toughman/ys-team check-update
-npx @toughman/ys-team@latest install-skills --force
-npx @toughman/ys-team@latest init-project --dir /path/to/project
+npx toughman-ys-team check-update
+npx toughman-ys-team@latest install-skills --force
+npx toughman-ys-team@latest init-project --dir /path/to/project
 ```
 
 `init-project` 对已有项目是安全更新：它会刷新 repo-local skills，并只更新 `AGENTS.md` / `CLAUDE.md` 中的 `ys-team:managed` 托管块。项目自己的运行命令、发布规则、性能或安全约束应保留在托管块外。

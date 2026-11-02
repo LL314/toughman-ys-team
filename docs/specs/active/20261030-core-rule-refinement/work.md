@@ -25,3 +25,15 @@ QA 场景证据见 `evidence/qa-scenarios.md`：10/10 有明确判定；5 PASS�
 Close 状态：BLOCKED。`npm whoami` 返回 ENEEDAUTH；未执行 `npm publish`、合回 `main`、创建或 push tag，因此 spec 保持 active，不归档。
 
 发布前置：npm latest=1.0.3，legacy=0.6.5；`npm whoami` 返回 ENEEDAUTH。
+
+2026-11-02 · 发布尝试复核：Chrome 已登录 `toughman`，但新建的无 bypass 2FA token 发布 `@toughman/ys-team@1.0.4` 返回 E403。该临时 token 已在 npm 页面撤销，cmux 中的临时 npm 配置也已清理。账号仍需启用 npm 2FA，或由用户创建带 bypass 2FA 的发布 token 后才能继续。
+
+2026-11-02 · 使用新建且带 Bypass 2FA 的 token 重试：`npm whoami` 返回 `toughman`，但发布 `@toughman/ys-team@1.0.4` 返回 E404。匿名 registry 查询显示 `@toughman/ys-team` 不存在，而原 unscoped `ys-team` 已存在 `1.0.3`；当前阻塞收敛为 scoped package 权限/命名问题，未继续盲目重试。
+
+## 2026-11-02 发布成功
+
+新 token 在 cmux 中经隐藏输入使用，`npm whoami` 返回 toughman。发布已接受（退出码 0），随后 registry 确认 `toughman-ys-team@1.0.4`、`latest=1.0.4`、维护者 toughman。下载的 tarball SHA-1 为 `c85d425c16a0707f09e49e35f053858b8d864f61`，与发布前验证的文件一致。
+
+发布前 7 项检查通过 / 0 失败：diff 格式、baseline 全量一致、版本一致、实际 pack、解包 CLI help、install-skills dry-run、init-project dry-run。临时认证文件已清理，未撤销用户提供的新 token。Git main/tag/push 待本次收尾完成。
+
+纠正前面的推断：E404 本身不能证明账号缺少 scoped 发布权限；E_STAGE_REQUIRED 证明旧 token 不能用于直接发布。官方 2026-10-02 公告已支持通过 staged publishing 创建新包，因此“首次创建必须 direct token”不是通用规则。本次使用用户提供的新 token 直接发布成功。
