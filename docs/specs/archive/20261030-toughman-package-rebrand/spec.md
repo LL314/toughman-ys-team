@@ -1,7 +1,7 @@
 ---
 Spec-Type: release
 Initiative: 20261030-toughman-package-rebrand
-Status: in-progress
+Status: completed
 Owner-Session: 2026-10-30
 Write-Scope:
   - package.json
@@ -9,7 +9,7 @@ Write-Scope:
   - scripts/ys-team.mjs
   - docs/guide/getting-started.md
   - docs/project/npm-publish.md
-  - docs/specs/active/20261030-toughman-package-rebrand/
+  - docs/specs/archive/20261030-toughman-package-rebrand/
   - skills/ys-team-init/SKILL.md
   - examples/baseline/CHANGELOG.md
   - skills/ys-team/baseline/CHANGELOG.md

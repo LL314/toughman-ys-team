@@ -1,7 +1,7 @@
 ---
 Spec-Type: control
 Initiative: 20261030-core-rule-refinement
-Status: in-progress
+Status: completed
 Owner-Session: 2026-10-30
 Write-Scope:
   - skills/ys-team-spec-talk/SKILL.md
@@ -28,11 +28,11 @@ Write-Scope:
   - skills/ys-team/baseline/CHANGELOG.md
   - package.json
   - docs/specs/queued/20261030-core-rule-refinement/
-  - docs/specs/active/20261030-core-rule-refinement/
+  - docs/specs/archive/20261030-core-rule-refinement/
   - docs/specs/archive/20261030-core-rule-refinement/
 Delete-Scope:
   - docs/specs/queued/20261030-core-rule-refinement/
-  - docs/specs/active/20261030-core-rule-refinement/
+  - docs/specs/archive/20261030-core-rule-refinement/
 Depends-On: []
 Verification: "见 ## 验收"
 ---
@@ -90,10 +90,10 @@ frontmatter 列出的路径是完整写入范围：两个执行入口承载规�
 
 ## 交付清单
 
-- [ ] 规则、skills、模板、用户文档同步。
-- [ ] spec-review PASS 后在 work 分支执行，完成独立 QA。
-- [ ] 两份 baseline 一致、版本一致、实际 npm pack 与安装验证通过。
-- [ ] npm publish、main 合并、tag 和 push 完成后才 close / archive。
+- [x] 规则、skills、模板、用户文档同步。
+- [x] spec-review PASS 后在 work 分支执行，完成独立 QA。
+- [x] 两份 baseline 一致、版本一致、实际 npm pack 与安装验证通过。
+- [x] npm publish、main 合并、tag 和 push 完成后才 close / archive。
 
 ## 依赖 / 风险
 

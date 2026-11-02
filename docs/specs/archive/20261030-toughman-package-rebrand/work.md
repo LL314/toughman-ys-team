@@ -18,3 +18,5 @@
 发布前 7 项检查通过 / 0 失败：diff 格式、baseline 全量一致、版本一致、实际 pack、解包 CLI help、install-skills dry-run、init-project dry-run。临时认证文件已清理，未撤销用户提供的新 token。Git main/tag/push 待本次收尾完成。
 
 纠正前面的推断：E404 本身不能证明账号缺少 scoped 发布权限；E_STAGE_REQUIRED 证明旧 token 不能用于直接发布。官方 2026-10-02 公告已支持通过 staged publishing 创建新包，因此“首次创建必须 direct token”不是通用规则。本次使用用户提供的新 token 直接发布成功。
+
+Git 收尾已验证：发布提交 `00d8c6d` 已合回 main，main、work 分支和 `v1.0.4` tag 已推送到 `LL314/toughman-ys-team`。本 spec 完成并归档；原 token 未撤销。
