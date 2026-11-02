@@ -3,7 +3,7 @@
 **Project Type**: Markdown-first method repository
 **Project Scale**: Small
 **Index Strategy**: Core module index
-**Last Updated**: 2026-06-30
+**Last Updated**: 2026-11-02
 
 ## `docs/methodology/`（方法论规范）
 **职责**：承载 ys-team 方法论的完整规范。overview.md 面向理解，reference.md 面向查规则细节；当前以 verifier 卡、验收保真度分级、三道闸、结构 lint、项目错题本和 release-first close 为核心。
@@ -61,6 +61,7 @@
 
 **关系**：
 - 入口：`docs/project/module-index.md`
+- 工作流更新与 npm 发布 SOP：`docs/project/npm-publish.md`（按需读取；经验见 `.ys_team/memory/交付守门人.md`）。
 - 被依赖：`.ys_team/`, `skills/*/SKILL.md`, `README.md`
 
 ## `README.md` / `AGENTS.md` / `CLAUDE.md`（对外接入口径）

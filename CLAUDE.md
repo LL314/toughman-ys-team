@@ -19,6 +19,8 @@
 
 ## 当前仓库约束
 
+- 更新本仓工作流内容、打包或发布 npm 包时，先读取 `docs/project/npm-publish.md`；相关经验见 `.ys_team/memory/交付守门人.md`。
+
 - 现实索引优先读取 `docs/project/module-index.md`。
 - `direct` / `patch` 不强制创建 `docs/specs/` 制品；`spec` 改动按 `docs/specs/` 执行和验收。
 - 文档、skills、baseline、CLI 和状态文件必须同次交付同步。

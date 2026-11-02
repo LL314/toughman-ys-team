@@ -83,6 +83,8 @@ verifier 卡重心是：
 
 ## Delivery Rules
 
+- 更新本仓工作流内容、打包或发布 npm 包时，先读取 `docs/project/npm-publish.md`；相关经验见 `.ys_team/memory/交付守门人.md`。
+
 - 默认优先保持方法论简洁，不堆叠过度解释。
 - skill 文案优先写"原则"和"边界"，避免把方法论写成硬流程。
 - README 面向使用者，文档要说明 Python / Java 项目如何低成本开始使用。
